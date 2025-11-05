@@ -18,7 +18,7 @@ def show_left_aligned(df):
     )
 
 # --- Input Section ---
-st.subheader("Enter Three Documents. Type the documents without a fullstop at the end.")
+st.subheader("Enter Three Documents. Type the documents without a punctuation mark at the end.")
 doc1 = st.text_area("Document 1")
 doc2 = st.text_area("Document 2")
 doc3 = st.text_area("Document 3")
@@ -26,7 +26,7 @@ doc3 = st.text_area("Document 3")
 # --- Process Button ---
 if st.button("Generate Tables"):
     if not doc1 or not doc2 or not doc3:
-        st.warning("Please fill in all three documents.Type the documents without a fullstop at the end.")
+        st.warning("Please fill in all three documents.Type the documents without a  punctuation mark at the end.")
     else:
         # --- Step 1: Tokenize ---
         docs = [doc.lower().strip().split() for doc in [doc1, doc2, doc3]]
