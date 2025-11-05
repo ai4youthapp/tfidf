@@ -18,7 +18,7 @@ def show_left_aligned(df):
     )
 
 # --- Input Section ---
-st.subheader("Enter Three Documents")
+st.subheader("Enter Three Documents. Type the documents without a fullstop at the end.")
 doc1 = st.text_area("Document 1")
 doc2 = st.text_area("Document 2")
 doc3 = st.text_area("Document 3")
