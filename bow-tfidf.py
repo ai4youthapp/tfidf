@@ -18,7 +18,7 @@ def show_left_aligned(df):
     )
 
 # --- Input Section ---
-st.subheader("Enter Three Documents. Do not type fullstop at the end of each document.")
+st.subheader("Enter Three Documents.")
 doc1 = st.text_area("Document 1")
 doc2 = st.text_area("Document 2")
 doc3 = st.text_area("Document 3")
@@ -30,7 +30,7 @@ if st.button("Generate Tables"):
     else:
         def clean_text(text):
             # Remove punctuation (including full stops) and convert to lowercase
-            translator = str.maketrans('', '', string.punctuation)
+            translator = str.maketrans(",", string.punctuation)
             return text.lower().translate(translator).split()
 
         docs = [clean_text(doc) for doc in [doc1, doc2, doc3]]
