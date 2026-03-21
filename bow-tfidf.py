@@ -96,7 +96,7 @@ doc2 = st.text_area("Document 2", height=40)
 doc3 = st.text_area("Document 3", height=40)
 
 # --- Start Button ---
-if st.button("Generate Tables"):
+if st.button("Let us explore text"):
     if not doc1 or not doc2 or not doc3:
         st.warning("Please fill all documents")
     else:
